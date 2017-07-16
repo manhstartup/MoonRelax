@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0800"
+   LastUpgradeVersion = "0830"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EB11EDC01D9AB24800804D34"
-               BuildableName = "RelaxApp.app"
-               BlueprintName = "RelaxApp"
-               ReferencedContainer = "container:RelaxApp.xcodeproj">
+               BuildableName = "MoonRelax.app"
+               BlueprintName = "MoonRelax"
+               ReferencedContainer = "container:MoonRelax.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EB11EDC01D9AB24800804D34"
-            BuildableName = "RelaxApp.app"
-            BlueprintName = "RelaxApp"
-            ReferencedContainer = "container:RelaxApp.xcodeproj">
+            BuildableName = "MoonRelax.app"
+            BlueprintName = "MoonRelax"
+            ReferencedContainer = "container:MoonRelax.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EB11EDC01D9AB24800804D34"
-            BuildableName = "RelaxApp.app"
-            BlueprintName = "RelaxApp"
-            ReferencedContainer = "container:RelaxApp.xcodeproj">
+            BuildableName = "MoonRelax.app"
+            BlueprintName = "MoonRelax"
+            ReferencedContainer = "container:MoonRelax.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EB11EDC01D9AB24800804D34"
-            BuildableName = "RelaxApp.app"
-            BlueprintName = "RelaxApp"
-            ReferencedContainer = "container:RelaxApp.xcodeproj">
+            BuildableName = "MoonRelax.app"
+            BlueprintName = "MoonRelax"
+            ReferencedContainer = "container:MoonRelax.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
