@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingAbout"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Tmx-vs-DOj" customClass="SettingAbout">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="1092"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ik-JB-PoB">
+                    <subviews>
+                        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="034-ae-JVr" customClass="MainNavHome">
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZgW-bg-vTO">
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </imageView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LBd-3H-hGx" userLabel="Favorist">
+                                    <subviews>
+                                        <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="soc-y7-cIQ">
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="soc-y7-cIQ" firstAttribute="top" secondItem="LBd-3H-hGx" secondAttribute="top" id="B1c-Zf-JSi"/>
+                                        <constraint firstAttribute="bottom" secondItem="soc-y7-cIQ" secondAttribute="bottom" id="GKT-Px-tZK"/>
+                                        <constraint firstAttribute="width" constant="70" id="a2H-KX-VPE"/>
+                                        <constraint firstAttribute="trailing" secondItem="soc-y7-cIQ" secondAttribute="trailing" id="giX-QZ-no6"/>
+                                        <constraint firstItem="soc-y7-cIQ" firstAttribute="leading" secondItem="LBd-3H-hGx" secondAttribute="leading" id="gno-C9-yOL"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d7t-Hk-ttF" userLabel="ViewTitle">
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7MJ-JK-GCd">
+                                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="7MJ-JK-GCd" firstAttribute="top" secondItem="d7t-Hk-ttF" secondAttribute="top" constant="28" id="Ejp-ub-T7B"/>
+                                        <constraint firstItem="7MJ-JK-GCd" firstAttribute="leading" secondItem="d7t-Hk-ttF" secondAttribute="leading" id="O2p-FW-13d"/>
+                                        <constraint firstAttribute="trailing" secondItem="7MJ-JK-GCd" secondAttribute="trailing" id="QNZ-oI-pKr"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BI3-Yi-H8J" userLabel="Clear">
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CombinedShape" translatesAutoresizingMaskIntoConstraints="NO" id="lKJ-N8-Xzf">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="15" id="2E5-TD-FXC"/>
+                                                <constraint firstAttribute="width" constant="15" id="hNg-01-IZI"/>
+                                            </constraints>
+                                        </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mn2-Sd-cMt">
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="closeAction:" destination="Tmx-vs-DOj" eventType="touchUpInside" id="1UK-wP-1vC"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="mn2-Sd-cMt" secondAttribute="trailing" id="7YY-xD-108"/>
+                                        <constraint firstItem="mn2-Sd-cMt" firstAttribute="leading" secondItem="BI3-Yi-H8J" secondAttribute="leading" id="FDv-dV-oZ8"/>
+                                        <constraint firstAttribute="width" constant="70" id="GjK-il-Vda"/>
+                                        <constraint firstItem="lKJ-N8-Xzf" firstAttribute="top" secondItem="BI3-Yi-H8J" secondAttribute="top" constant="31" id="Zyp-0L-RSf"/>
+                                        <constraint firstItem="mn2-Sd-cMt" firstAttribute="top" secondItem="BI3-Yi-H8J" secondAttribute="top" id="g2H-Dg-bQA"/>
+                                        <constraint firstAttribute="bottom" secondItem="mn2-Sd-cMt" secondAttribute="bottom" id="hBG-pV-BFN"/>
+                                        <constraint firstAttribute="trailing" secondItem="lKJ-N8-Xzf" secondAttribute="trailing" constant="28" id="wzk-mz-5FO"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="ZgW-bg-vTO" firstAttribute="top" secondItem="034-ae-JVr" secondAttribute="top" id="5TY-iw-4vW"/>
+                                <constraint firstItem="BI3-Yi-H8J" firstAttribute="leading" secondItem="d7t-Hk-ttF" secondAttribute="trailing" id="5y6-DF-VDw"/>
+                                <constraint firstAttribute="bottom" secondItem="ZgW-bg-vTO" secondAttribute="bottom" id="CNQ-ox-YvO"/>
+                                <constraint firstAttribute="trailing" secondItem="ZgW-bg-vTO" secondAttribute="trailing" id="JTx-Cy-00c"/>
+                                <constraint firstAttribute="bottom" secondItem="LBd-3H-hGx" secondAttribute="bottom" constant="-8" id="KAw-hD-6mM"/>
+                                <constraint firstItem="BI3-Yi-H8J" firstAttribute="top" secondItem="034-ae-JVr" secondAttribute="top" id="VU9-jA-N2d"/>
+                                <constraint firstItem="ZgW-bg-vTO" firstAttribute="leading" secondItem="034-ae-JVr" secondAttribute="leading" id="VlR-Sa-1xC"/>
+                                <constraint firstItem="d7t-Hk-ttF" firstAttribute="top" secondItem="034-ae-JVr" secondAttribute="top" id="WlG-Ed-mNa"/>
+                                <constraint firstItem="LBd-3H-hGx" firstAttribute="top" secondItem="034-ae-JVr" secondAttribute="top" id="XYM-np-LKd"/>
+                                <constraint firstAttribute="trailing" secondItem="BI3-Yi-H8J" secondAttribute="trailing" id="eXj-uI-1S8"/>
+                                <constraint firstItem="d7t-Hk-ttF" firstAttribute="leading" secondItem="LBd-3H-hGx" secondAttribute="trailing" id="fFd-CZ-wX6"/>
+                                <constraint firstAttribute="bottom" secondItem="BI3-Yi-H8J" secondAttribute="bottom" constant="-8" id="fWk-JX-Ex7"/>
+                                <constraint firstItem="LBd-3H-hGx" firstAttribute="leading" secondItem="034-ae-JVr" secondAttribute="leading" id="iSW-JQ-eZD"/>
+                                <constraint firstAttribute="bottom" secondItem="d7t-Hk-ttF" secondAttribute="bottom" constant="-8" id="ltu-hm-d4t"/>
+                                <constraint firstAttribute="height" constant="70" id="sG6-cT-HSU"/>
+                            </constraints>
+                        </view>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="a5a-89-HoJ"/>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tsX-kS-0wp">
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EI0-aa-v0d">
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k2B-dc-n9l">
+                                            <string key="text">Nowadays, modern life leads to the tension stress. It makes our life becomes more difficult, and no one wants to be pursued by stress.
+
+According to a newspaper of the Wall Street Journal, stress causes the decrease in labor productivity, on both obesity and physical inactivity. Moreover, it also makes the bad relationships &amp; come to stress 
+
+A Catalyst report indicated that most employees feel stress because of four main reasons: workload, personal relationships, working conditions, working interest and personal issues.
+
+According to Huffington post, a result in 45-year long study on the effects of stress on middle-aged women showed that stressful events in their life can leave serious consequences and long term both physical and spirit which increase the risk of memory decline.
+
+Chronic stress can cause a series of serious disease, especially cardiovascular disease. Everyone knows that diet plays an important role in health, but have you ever wondered how stress affects your life. In a recent study on the relationship between chronic stress and heart disease published on Health page, the researchers recommend that people should not allow ourselves to fall into a state of chronic stress if you want a healthy life and longevity.
+
+Stress can also increase the body's levels of cortisol, chronic as it is dangerous. Cortisol is the hormone plays an important role in the metabolism of proteins, fats and carbohydrates. It affects levels of sugar in blood, helps maintain blood pressure, and helps regulate the immune system. Cortisol plays an important role in helping us cope in stressful situations, but its presence can often be harmful to the body.
+
+Childhood Stress also causes heart disease in adulthood. The scientists found that if a person is under stress or psychological trauma in childhood, prone to heart disease later. The cause was interpreted as the tension increases the sensitivity of a hormone that leads to increase blood pressure, which increases the risk of cardiovascular disease later.
+
+Aware of the dangers of stress in your life and it's important that no one can renounce stress life. Relaf was born, we are a team of researching about stress and how to relieve stress in the modern life. Through years of research and find out the methods we realize the music is an indispensable catalyst for human development can prevent stress induced uncontrollable consequences in life. Relaf was born with the aim of being a catalyst for life, bring joys. The application will help you control and minimize the stress everyday, more focus on the job. We will be very happy if you join our fan page at facebook.com/relafapp. One way to encourage us if you notice that you feel comfortable when using.
+</string>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" red="0.61960784310000006" green="0.61960784310000006" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="k2B-dc-n9l" secondAttribute="trailing" constant="15" id="E78-KF-uit"/>
+                                        <constraint firstItem="k2B-dc-n9l" firstAttribute="top" secondItem="EI0-aa-v0d" secondAttribute="top" constant="20" id="QrR-uy-miw"/>
+                                        <constraint firstItem="k2B-dc-n9l" firstAttribute="leading" secondItem="EI0-aa-v0d" secondAttribute="leading" constant="15" id="W5C-Li-Bcl"/>
+                                        <constraint firstAttribute="bottom" secondItem="k2B-dc-n9l" secondAttribute="bottom" constant="57" id="p3z-9U-0yU"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="EI0-aa-v0d" firstAttribute="leading" secondItem="tsX-kS-0wp" secondAttribute="leading" id="2sh-lj-7Da"/>
+                                <constraint firstAttribute="bottom" secondItem="EI0-aa-v0d" secondAttribute="bottom" id="7IE-5g-RbS"/>
+                                <constraint firstAttribute="trailing" secondItem="EI0-aa-v0d" secondAttribute="trailing" id="9dt-Fy-HhU"/>
+                                <constraint firstItem="EI0-aa-v0d" firstAttribute="centerX" secondItem="tsX-kS-0wp" secondAttribute="centerX" id="pAR-ff-cDc"/>
+                                <constraint firstItem="EI0-aa-v0d" firstAttribute="top" secondItem="tsX-kS-0wp" secondAttribute="top" id="qmI-Dh-xen"/>
+                            </constraints>
+                        </scrollView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="tsX-kS-0wp" firstAttribute="top" secondItem="034-ae-JVr" secondAttribute="bottom" id="1JN-q7-2DY"/>
+                        <constraint firstAttribute="trailing" secondItem="034-ae-JVr" secondAttribute="trailing" id="5us-ND-TrE"/>
+                        <constraint firstItem="a5a-89-HoJ" firstAttribute="top" secondItem="034-ae-JVr" secondAttribute="bottom" id="6TS-Dz-i5U"/>
+                        <constraint firstItem="tsX-kS-0wp" firstAttribute="leading" secondItem="4ik-JB-PoB" secondAttribute="leading" id="B7K-fO-y9l"/>
+                        <constraint firstAttribute="trailing" secondItem="tsX-kS-0wp" secondAttribute="trailing" id="Jo0-FU-dlh"/>
+                        <constraint firstAttribute="bottom" secondItem="a5a-89-HoJ" secondAttribute="bottom" id="NfL-WM-a47"/>
+                        <constraint firstAttribute="bottom" secondItem="tsX-kS-0wp" secondAttribute="bottom" id="XDq-nd-Whp"/>
+                        <constraint firstItem="034-ae-JVr" firstAttribute="leading" secondItem="4ik-JB-PoB" secondAttribute="leading" id="dMa-FK-ikB"/>
+                        <constraint firstAttribute="trailing" secondItem="a5a-89-HoJ" secondAttribute="trailing" id="gpm-5z-O6Z"/>
+                        <constraint firstItem="a5a-89-HoJ" firstAttribute="leading" secondItem="4ik-JB-PoB" secondAttribute="leading" id="pJh-ZE-BwZ"/>
+                        <constraint firstItem="034-ae-JVr" firstAttribute="top" secondItem="4ik-JB-PoB" secondAttribute="top" id="rgc-73-Onx"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="4ik-JB-PoB" secondAttribute="bottom" id="37O-FR-Cmr"/>
+                <constraint firstItem="4ik-JB-PoB" firstAttribute="leading" secondItem="Tmx-vs-DOj" secondAttribute="leading" id="9wK-Vv-TMN"/>
+                <constraint firstItem="4ik-JB-PoB" firstAttribute="top" secondItem="Tmx-vs-DOj" secondAttribute="top" id="OVb-Kl-aaU"/>
+                <constraint firstAttribute="trailing" secondItem="4ik-JB-PoB" secondAttribute="trailing" id="Wlu-L9-wJe"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="imgBackGround" destination="a5a-89-HoJ" id="3mR-bM-1Kx"/>
+                <outlet property="imgHeader" destination="ZgW-bg-vTO" id="qWW-Ak-Fza"/>
+                <outlet property="lbTitle" destination="7MJ-JK-GCd" id="34u-aU-fYN"/>
+                <outlet property="vContent" destination="4ik-JB-PoB" id="NxH-LS-cHF"/>
+                <outlet property="vViewNav" destination="034-ae-JVr" id="QBp-kl-hSj"/>
+            </connections>
+            <point key="canvasLocation" x="-122.5" y="246"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="CombinedShape" width="10" height="10"/>
+    </resources>
+</document>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="SettingContentCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ooo-Th-9jP">
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="C6n-it-6R9">
+                        <color key="backgroundColor" red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="AJm-yt-nmv"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ofa-6A-Nuh">
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="sVM-sX-yHm">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="ZtY-i0-I7R"/>
+                            <constraint firstAttribute="width" constant="15" id="u6y-2J-NXL"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="C6n-it-6R9" firstAttribute="top" secondItem="Ofa-6A-Nuh" secondAttribute="bottom" constant="10" id="1Ne-bc-xE8"/>
+                    <constraint firstItem="Ofa-6A-Nuh" firstAttribute="leading" secondItem="Ooo-Th-9jP" secondAttribute="trailing" constant="5" id="75C-j6-Sbu"/>
+                    <constraint firstItem="C6n-it-6R9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="DSa-q9-fCW"/>
+                    <constraint firstItem="Ooo-Th-9jP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="Iqf-QK-712"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Ofa-6A-Nuh" secondAttribute="trailing" constant="10" id="LhE-tw-xG2"/>
+                    <constraint firstAttribute="bottom" secondItem="C6n-it-6R9" secondAttribute="bottom" id="VnJ-Yo-aXe"/>
+                    <constraint firstItem="Ooo-Th-9jP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="c01-2Y-59Z"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="sVM-sX-yHm" secondAttribute="trailing" constant="10" id="dwl-Wi-3IF"/>
+                    <constraint firstAttribute="trailing" secondItem="C6n-it-6R9" secondAttribute="trailing" id="f7Y-00-H3g"/>
+                    <constraint firstItem="Ofa-6A-Nuh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="hib-iz-UTd"/>
+                    <constraint firstItem="C6n-it-6R9" firstAttribute="top" secondItem="Ooo-Th-9jP" secondAttribute="bottom" constant="10" id="jWF-VT-GPD"/>
+                    <constraint firstItem="sVM-sX-yHm" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="wTx-xx-e1L"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="imgArrow" destination="sVM-sX-yHm" id="eoX-UK-oR0"/>
+                <outlet property="lbDescription" destination="Ofa-6A-Nuh" id="aqx-PX-0at"/>
+                <outlet property="lbTitle" destination="Ooo-Th-9jP" id="AJE-ly-f3T"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="arrow" width="8" height="13"/>
+    </resources>
+</document>

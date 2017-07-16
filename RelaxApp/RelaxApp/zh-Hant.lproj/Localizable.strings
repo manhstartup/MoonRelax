@@ -1,0 +1,106 @@
+/*
+ Localizable.strings
+ RelaxApp
+ 
+ Created by JoJo on 11/20/16.
+ Copyright © 2016 JoJo. All rights reserved.
+ */
+"kCancel" = "Cancel";
+"kAddToFavorites" = "Add to favorites";
+"kWriteSomething" = "Write something...";
+"kSave" = "Save";
+"kuOK" = "Ok";
+"kTimer" = "Timer";
+"kPause" = "Pause";
+"kuPLAYWITHFAVORITE" = "PLAY WITH FAVORITE";
+"kAbout" = "About";
+"kCredit" = "Credit";
+"kYouLikeApp" = "You like app?\nHelp us share on social";
+"kPrivacy" = "Privacy";
+"kCheckNow" = "Check now";
+"kRemoveAds" = "Remove ads";
+"kVersion" = "Version";
+"kWatchAdsEnableTimer" = "Watch an ads to enable this timer!";
+"kCopyRight" = "© 2016 by Relafapp";
+"kUpdate" = "Download";
+"kCountDown" = "Countdown";
+"kClock" = "Clock";
+"kPremium" = "Premium";
+"kPremiumVersionNoAds" = "Premium version no Ads";
+"kManagement" = "Management";
+"kManagementDownloaded" = "Management downloaded";
+"kRestorePurchased" = "Restore purchased";
+"kMailTo" = "Email to";
+"kOurTwitter" = "Our twitter";
+"kOurFanpage" = "Our fanpage";
+"kBadNetwork" = "No network connection";
+"kPleaseConnectInternet" = "Please connect to working internet connection.";
+"kAnotherUpdating" = "Another downloading, please wait!";
+"kPleaseKeepCalm" = "Please keep calm";
+"kEdit" = "Edit";
+"kuVOLUME" = "VOLUME";
+"kuFAVORITE" = "FAVORITE";
+"kuTIMER" = "TIMER";
+"kuSETTING" = "SETTING";
+"kWatchAnAdsToGetThisSound" = "Watch an ads before get this sound in 1 day!";
+"kByClickingOKYouPermit" = "Watch an ads to check update By clicking OK you permit the app download and use free storage on your phone.";
+"kClickUpdate" = "By clicking OK you permit the app download and use free storage on your phone.";
+"kLestTalk" = "Let’s talk with us";
+"kBuy" = "Buy";
+"kWatchOneAdvertisement" = "Watch one advertisement";
+"kCongratulations" = "Congratulations";
+"kFavoCreatedSucessful" = "You are sucessful created one favorite!";
+"kTimeCreatedSucessful" = "You are sucessful created one timer!";
+"kTellUsWhatYouThink" = "Tell us what you think";
+"kMessageRate" = "How would you rate your RelaF experience? Thanks for your support!";
+"kAboutUs" = "About us";
+"kBuyWith" = "Buy with";
+"kFavorite" = "Favorite";
+"kFavorites" = "Favorites";
+"kPlay" = "Play";
+"kPlayWithFavorite" = "Play with favorite";
+"kSetting" = "Setting";
+"kTimerTyper" = "Timer Typer";
+"kVolume" = "Volume";
+/*
+ Deficient
+ */
+"kInfoToFavorites" = "Info to favorites";
+"kEditToTavorites" = "Edit to favorites";
+"kSuccess" = "Success";
+"kAdd" = "Add";
+"kPlaying" = "Play";
+"kuCHOOSETIMER" = "CHOOSE TIMER";
+"kChoosesPause" = "Chooses Pause or Play";
+"kListFavorites" = "List Favorites";
+"kDone" = "Done";
+"kWatchAdsAavorite" = "Watch an ads to play this favorite";
+"kDownloading" = "Downloading";
+"kDoYouWantUpdate" = "Do you want update something new?";
+"kWatchAdsTime" = "Watch an ads to check update in this time !";
+"kCheckUpdate" = "Check update";
+"kConnectWithUs" = "Connect with us";
+"kProFeatured" = "Pro featured";
+"kUnlockPro" = "Unlock pro featured";
+"kSendFeedback" = "Send us a feedback";
+"kChooseTimerType" = "Timer Type";
+"kOOPS" = "OOPS you are Offline";
+"kNeedConnect" = "You need to connect to Wifi or Mobile data to access data!";
+"kGiveSpecialThanksTo" = "Give special thanks to";
+"kOpenSource" = "Open Source";
+"kTypeAnything" = "type anything you want";
+"kSureDelete" = "are you sure delete?";
+"kEnterName" = "Please enter timer's name";
+"kMessageShareSocial" =  "I recommended you using RelaF for relax - get it on";
+"kHelpTranslate" = "help us translate";
+"kMissingSounds" = "you are missing sounds please download another to enjoy!";
+
+
+"kWSName1" = "TAP AND PLAY";
+"kWSName2" = "PERSONALIZED FOR LIFE";
+"kWSName3" = "JUST TAP AND UPDATE SOUNDS";
+"kWSName4" = "ALSO HAVE SECRET WAITING YOU!";
+"kWSDesc1" = "Just tap and play the music you want. Let's combine sounds and make your own sonata. Easy to imagine!";
+"kWSDesc2" = "Save your favorite combination and share with everyone, use it as an alarm or to arrange your schedule for relaxation.";
+"kWSDesc3" = "All you need to do is checking updates, everything will be downloaded to your cellphone in a blink. Just enjoy the newest sounds with RelaF";
+"kWSDesc4" = "RelaF has many interesting things still waiting for you to explore. Please share with us and the world how you utilize RelaF";

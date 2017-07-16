@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="biW-le-DJq" customClass="VolumeView">
+            <subviews>
+                <imageView userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h2X-TV-CCd">
+                    <color key="backgroundColor" red="0.066666666666666666" green="0.37254901960784315" blue="0.89411764705882346" alpha="1" colorSpace="calibratedRGB"/>
+                </imageView>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="lhm-Tv-Dr3">
+                    <connections>
+                        <action selector="volumeSliderEdittingDidBegin:" destination="biW-le-DJq" eventType="touchUpInside" id="7P8-7p-l7f"/>
+                        <action selector="volumeSliderEdittingDidEnd:" destination="biW-le-DJq" eventType="touchUpOutside" id="Vua-6v-o1Y"/>
+                    </connections>
+                </slider>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWv-fh-TEr">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="O5j-jm-xXa"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <state key="normal" title="-"/>
+                    <connections>
+                        <action selector="decreaseAction:" destination="biW-le-DJq" eventType="touchUpInside" id="jg9-Dr-DwB"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qDb-QE-Sv3">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="mSQ-nY-stj"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <state key="normal" title="+"/>
+                    <connections>
+                        <action selector="increaseAction:" destination="biW-le-DJq" eventType="touchUpInside" id="b5Y-TQ-OTE"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wRX-bd-uBq">
+                    <color key="backgroundColor" red="0.31372549019607843" green="0.8901960784313725" blue="0.76078431372549016" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="k8v-Ed-C6E"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="qDb-QE-Sv3" secondAttribute="trailing" id="0Rd-th-3vy"/>
+                <constraint firstAttribute="trailing" secondItem="h2X-TV-CCd" secondAttribute="trailing" id="0gL-S1-5VP"/>
+                <constraint firstItem="wRX-bd-uBq" firstAttribute="leading" secondItem="biW-le-DJq" secondAttribute="leading" id="30x-Pj-5JG"/>
+                <constraint firstAttribute="bottom" secondItem="dWv-fh-TEr" secondAttribute="bottom" id="EE0-dz-LLo"/>
+                <constraint firstAttribute="bottom" secondItem="wRX-bd-uBq" secondAttribute="bottom" id="Fii-OT-dq1"/>
+                <constraint firstItem="qDb-QE-Sv3" firstAttribute="top" secondItem="biW-le-DJq" secondAttribute="top" id="JZA-qD-lEs"/>
+                <constraint firstItem="lhm-Tv-Dr3" firstAttribute="centerY" secondItem="biW-le-DJq" secondAttribute="centerY" constant="1" id="UmH-2Y-T0C"/>
+                <constraint firstAttribute="bottom" secondItem="h2X-TV-CCd" secondAttribute="bottom" id="VxS-EO-vp9"/>
+                <constraint firstItem="h2X-TV-CCd" firstAttribute="leading" secondItem="biW-le-DJq" secondAttribute="leading" id="eMk-Jk-SlR"/>
+                <constraint firstAttribute="bottom" secondItem="qDb-QE-Sv3" secondAttribute="bottom" id="oyV-d6-Jik"/>
+                <constraint firstItem="h2X-TV-CCd" firstAttribute="top" secondItem="biW-le-DJq" secondAttribute="top" id="p99-g3-g6A"/>
+                <constraint firstItem="dWv-fh-TEr" firstAttribute="top" secondItem="biW-le-DJq" secondAttribute="top" id="pad-BL-9UP"/>
+                <constraint firstItem="lhm-Tv-Dr3" firstAttribute="leading" secondItem="dWv-fh-TEr" secondAttribute="trailing" constant="5" id="qgt-gu-WCU"/>
+                <constraint firstAttribute="trailing" secondItem="wRX-bd-uBq" secondAttribute="trailing" id="vip-ro-Hfg"/>
+                <constraint firstItem="dWv-fh-TEr" firstAttribute="leading" secondItem="biW-le-DJq" secondAttribute="leading" id="vqR-e4-y9d"/>
+                <constraint firstItem="qDb-QE-Sv3" firstAttribute="leading" secondItem="lhm-Tv-Dr3" secondAttribute="trailing" constant="5" id="x8a-3Z-njp"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="btnDecrease" destination="dWv-fh-TEr" id="y5S-ZF-tMp"/>
+                <outlet property="btnIncrease" destination="qDb-QE-Sv3" id="beS-lK-8Ai"/>
+                <outlet property="slider" destination="lhm-Tv-Dr3" id="k0M-sd-AKl"/>
+                <outlet property="vBackGround" destination="h2X-TV-CCd" id="zu3-np-zs6"/>
+                <outlet property="vline" destination="wRX-bd-uBq" id="dDA-3F-Pqa"/>
+            </connections>
+        </view>
+    </objects>
+</document>

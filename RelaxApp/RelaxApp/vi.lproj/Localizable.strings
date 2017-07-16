@@ -1,0 +1,107 @@
+/*
+ Localizable.strings
+ RelaxApp
+ 
+ Created by JoJo on 11/20/16.
+ Copyright © 2016 JoJo. All rights reserved.
+ */
+"kCancel" = "Thôi";
+"kAddToFavorites" = "Thêm vào mục yêu thích";
+"kWriteSomething" = "Viết gì đó...";
+"kSave" = "Lưu lại";
+"kuOK" = "Ok";
+"kTimer" = "Thời gian";
+"kPause" = "Tạm dừng";
+"kuPLAYWITHFAVORITE" = "CHƠI NHẠC VỚI MỤC YÊU THÍCH";
+"kAbout" = "Thông tin";
+"kCredit" = "Lời cám ơn";
+"kYouLikeApp" = "Bạn thích ứng dụng chứ?\ngiúp chúng tôi chia sẻ nhé";
+"kPrivacy" = "An toàn thông tin";
+"kCheckNow" = "Kiểm tra luôn";
+"kRemoveAds" = "Xóa bỏ quảng cáo";
+"kVersion" = "Phiên bản";
+"kWatchAdsEnableTimer" = "Xem một quảng cáo để bật thời gian này!";
+"kCopyRight" = "© 2016 bởi Relafapp";
+"kUpdate" = "Tải về";
+"kCountDown" = "Đếm ngược";
+"kClock" = "Đồng hồ";
+"kPremium" = "Cao cấp";
+"kPremiumVersionNoAds" = "Phiên bản cao cấp không quảng cáo";
+"kManagement" = "Quản lý";
+"kManagementDownloaded" = "Quản lý những mục đã tải";
+"kRestorePurchased" = "Restore purchased";
+"kMailTo" = "Lấy lại mục đã mua";
+"kOurTwitter" = "Twitter của chúng tôi";
+"kOurFanpage" = "Fanpage của chúng tôi";
+"kBadNetwork" = "Không có kết nối";
+"kPleaseConnectInternet" = "Hãy thử kết nối với một mạng internet.";
+"kAnotherUpdating" = "Có một mục đang tải rồi, làm ơn chờ đợi!";
+"kPleaseKeepCalm" = "Cứ bình tĩnh nhé";
+"kEdit" = "Sửa";
+"kuVOLUME" = "ÂM LƯỢNG";
+"kuFAVORITE" = "MỤC YÊU THÍCH";
+"kuTIMER" = "THỜI GIAN";
+"kuSETTING" = "CÀI ĐẶT";
+"kWatchAnAdsToGetThisSound" = "Xem một quảng cáo trước khi nhận được âm thanh này trong 1 ngày!";
+"kByClickingOKYouPermit" = "Xem một quảng cáo để kiểm tra cập nhật khi bạn nhấp ok đồng nghĩa bạn cho ứng dụng có quyền sử dụng dung lượng trống trong điện thoại của bạn.";
+"kClickUpdate" = "Khi bạn nhấp ok đồng nghĩa bạn cho ứng dụng có quyền sử dụng dung lượng trống trong điện thoại của bạn.";
+
+"kLestTalk" = "Nói chuyện với chúng tôi";
+"kBuy" = "Mua";
+"kWatchOneAdvertisement" = "Xem một quảng cáo";
+"kCongratulations" = "Chúc mừng";
+"kFavoCreatedSucessful" = "Bạn đã tạo thành công mục ưa thích!";
+"kTimeCreatedSucessful" = "Bạn đã tạo thành công một mục thời gian!";
+"kTellUsWhatYouThink" = "Nói với chúng tôi điều bạn nghĩ";
+"kMessageRate" = "Bạn hãy chia sẻ kinh nghiệm sử dụng RelaF nhé? Rất cám ơn sự hỗ trợ của bạn";
+"kAboutUs" = "Thông tin về chúng tôi";
+"kBuyWith" = "Mua với";
+"kFavorite" = "Mục yêu thích";
+"kFavorites" = "Những mục yêu thích";
+"kPlay" = "Chơi nhạc";
+"kPlayWithFavorite" = "Chơi nhạc với mục yêu thích";
+"kSetting" = "Cài đặt";
+"kTimerTyper" = "Kiểu thời gian";
+"kVolume" = "Âm lượng";
+
+/*
+ Deficient
+ */
+"kInfoToFavorites" = "Thông tin mục yêu thích";
+"kEditToTavorites" = "Sửa mục yêu thích";
+"kSuccess" = "Thành công";
+"kAdd" = "Thêm";
+"kPlaying" = "Play";
+"kuCHOOSETIMER" = "CHỌN THỜI GIAN";
+"kChoosesPause" = "Chọn Tạm dừng hoặc play";
+"kListFavorites" = "Danh sách mục yêu thích";
+"kDone" = "Xong";
+"kWatchAdsAavorite" = "Xem một quảng cáo để play mục yêu thích này";
+"kDownloading" = "Downloading";
+"kDoYouWantUpdate" = "Bạn có chắc muốn cập nhật?";
+"kWatchAdsTime" = "Xem một quảng cáo để kiểm tra cập nhật ngay lúc này !";
+"kCheckUpdate" = "Kiểm tra cập nhật";
+"kConnectWithUs" = "Kết nối với chúng tooi";
+"kProFeatured" = "Chức năng cao cấp";
+"kUnlockPro" = "Mở chức năng cao cấp";
+"kSendFeedback" = "Gửi lại phản hồi";
+"kChooseTimerType" = "Kiểu thời gian";
+"kOOPS" = "Đáng tiếc! bạn không có mạng";
+"kNeedConnect" = "Bạn cần kết nối Wifi hoặc dữ liễu di động để chạy chức năng này";
+"kGiveSpecialThanksTo" = "Cám ơn đặc biệt đến";
+"kOpenSource" = "Mã nguồn mở";
+"kTypeAnything" = "gõ bất cứ điều gì có muốn";
+"kSureDelete" = "Bạn có chắc chắn xóa ?";
+"kEnterName" = "Bạn chưa nhập tên";
+"kMessageShareSocial" =  "Tôi đề khuyên bạn sử dụng RelaF để thư giãn - nhận được nó trên";
+"kHelpTranslate" = "giúp chúng tôi dịch";
+"kMissingSounds" = "you are missing sounds please download another to enjoy!";
+
+"kWSName1" = "TAP VÀ CHƠI";
+"kWSName2" = "CUỘC SỐNG CÁ NHÂN";
+"kWSName3" = "CHỈ CẦN TAP VÀ CẬP NHẬT ÂM THANH";
+"kWSName4" = "CÓ NHỮNG ĐIỀU THÚ VỊ ĐANG CHỜ BẠN!";
+"kWSDesc1" = "Chỉ cần tap và chơi bản nhạc bạn muốn. Hãy kết hợp những đoạn nhạc với nhau để tạo thành một âm thanh sống động hơn. Dễ tưởng tượng hơn!";
+"kWSDesc2" = "Lưu lại những sự kết hợp yêu thích và chia sẻ với thế giới, sử dụng như một đồng hồ báo thức hoặc lên lịch trình thư giãn theo thời gian biểu của bạn.";
+"kWSDesc3" = "Chỉ cần kiểm tra cập nhật, mọi thứ sẽ nhanh chóng tải về điện thoại của bạn. Hãy luôn tận hưởng những âm thanh mới nhất! với RelaF";
+"kWSDesc4" = "Và RelaF còn có những điều thú vị đang chờ đợi bạn khám phá. Hãy chia sẻ với chúng tôi cũng như thế giới bạn sử dụng RelaF như thế nào?";

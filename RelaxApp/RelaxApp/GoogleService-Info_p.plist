@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>219689142728-p4utp2t26vmb9dl25q7h1oc279gn22bt.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.219689142728-p4utp2t26vmb9dl25q7h1oc279gn22bt</string>
+	<key>API_KEY</key>
+	<string>AIzaSyA38PrmVzpxQ_SFXeA3BdJ_BvkUxj_tGr4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>219689142728</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.relaf.pro</string>
+	<key>PROJECT_ID</key>
+	<string>relafapp-pro-version</string>
+	<key>STORAGE_BUCKET</key>
+	<string>relafapp-pro-version.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:219689142728:ios:ee74bc9397c13bd3</string>
+	<key>DATABASE_URL</key>
+	<string>https://relafapp-pro-version.firebaseio.com</string>
+</dict>
+</plist>
