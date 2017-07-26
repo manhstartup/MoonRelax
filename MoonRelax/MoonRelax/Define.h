@@ -48,7 +48,7 @@
 #define COLOR_PROGRESS 0x3023AE
 #define COLOR_PROGRESS_HOZI 0xC86DD7
 
-#define COLOR_SOUND_ITEM 0xEFEFF0
+#define COLOR_SOUND_ITEM 0x9A6FE9
 #define COLOR_TABBAR_BOTTOM 0xF8F8F8
 #define COLOR_TEXT_ITEM 0x8D8D8D
 #define COLOR_TEXT_SETTING 0x4A4A4A
@@ -78,15 +78,15 @@
 #define NOTIFCATION_CATEGORY @"NOTIFCATION_CATEGORY"
 #define NOTIFCATION_HIDE_ADS @"NOTIFCATION_HIDE_ADS"
 #define NOTIFCATION_SHOW_ADS @"SHOW_ADS"
-#define FIREBASE_INTERSTITIAL_UnitID @"ca-app-pub-1671106005232686/3358212851"
-#define FIREBASE_BANNER_UnitID @"ca-app-pub-1671106005232686/9265145652"
-#define FIREBASE_APP_ID @"ca-app-pub-1671106005232686~9963149658"
-#define REVMOB_ID @"581b77b688e696b311e2fd3d"
+#define FIREBASE_INTERSTITIAL_UnitID @""//@"ca-app-pub-1671106005232686/3358212851"
+#define FIREBASE_BANNER_UnitID @""//@"ca-app-pub-1671106005232686/9265145652"
+#define FIREBASE_APP_ID @""//@"ca-app-pub-1671106005232686~9963149658"
+#define REVMOB_ID @""//@"581b77b688e696b311e2fd3d"
 
 #define FILE_IAP_SAVE @"IAP"
-#define kTotalRemoveAdsProductIdentifier @"com.relaf.free.removeads"
-#define root_ipa_free @"com.relaf.free."
-#define root_ipa_pro @"com.relaf.pro."
+#define kTotalRemoveAdsProductIdentifier @""//@"com.relaf.free.removeads"
+#define root_ipa_free @""//@"com.relaf.free."
+#define root_ipa_pro @""//@"com.relaf.pro."
 
 #define DEFAULT_VOLUME 0.5
 

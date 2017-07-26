@@ -21,6 +21,8 @@
 #import "AppCommon.h"
 #import <RevMobAds/RevMobAds.h>
 @import GoogleMobileAds;
+@import FirebaseDatabase;
+@import FirebaseStorage;
 @interface HomeVC ()<UIScrollViewDelegate,AVAudioSessionDelegate,GADInterstitialDelegate,GADBannerViewDelegate>
 {
     NSMutableArray                  *arrCategory;
@@ -30,9 +32,10 @@
     int iNumberCollection;
     BOOL areAdsRemoved;
     BOOL isAdsMob;
+    
 }
 @property (nonatomic, strong) RevMobBannerView *bannerViewRevMobAds;
-
+@property (strong, nonatomic) FIRDatabaseReference *ref;
 @end
 
 @implementation HomeVC
@@ -86,6 +89,15 @@
     [self fnSetButtonBottom];
     //volume
     [self addSubViewVolumeTotal];
+    
+    self.ref = [[FIRDatabase database] reference];
+//   FIRDatabaseQuery *query = [[self.ref child:@"categories"] queryOrderedByValue];
+    [self.ref observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+        NSLog(@"%@",snapshot.value) ;
+    } withCancelBlock:^(NSError * _Nonnull error) {
+        NSLog(@"%@",error.debugDescription) ;
+
+    }];
 }
 -(void)viewDidAppear:(BOOL)animated
 {
@@ -142,7 +154,7 @@
 //MARK: - NETWORK
 -(void)loadCache
 {
-    
+
     if (![COMMON isReachableCheck]) {
     }
     
@@ -232,6 +244,8 @@
         //Banner was clicked
         isAdsMob = NO;
     }];
+
+
 }
 - (void)hideCustomBanner {
     [self.bannerViewRevMobAds removeFromSuperview];
@@ -239,10 +253,11 @@
 -(void)getCategory
 {
     __weak HomeVC *wself = self;
-    managerCategory = [AFHTTPSessionManager manager];
-    [managerCategory GET:[NSString stringWithFormat:@"%@%@",BASE_URL,@"data.json"] parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
-        NSLog(@"JSON: %@", responseObject);
-        if ([responseObject[@"categories"] isKindOfClass:[NSArray class]]) {
+
+    self.ref = [[FIRDatabase database] reference];
+    [self.ref observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+        
+        if ([snapshot.value[@"categories"] isKindOfClass:[NSArray class]]) {
             //free
             [arrCategory removeAllObjects];
             //check exist in blacklist
@@ -256,7 +271,7 @@
             [arrFull addObjectsFromArray:arrBlackList];
             
             NSMutableArray *arrTmp = [NSMutableArray new];
-            for (NSDictionary *dic in responseObject[@"categories"]) {
+            for (NSDictionary *dic in snapshot.value[@"categories"]) {
                 if (![arrFull containsObject:dic[@"id"]]) {
                     [arrTmp addObject:dic];
                 }
@@ -272,9 +287,14 @@
             }
             
         }
-    } failure:^(NSURLSessionTask *operation, NSError *error) {
-        NSLog(@"Error: %@", error);
+
+        NSLog(@"%@",snapshot.value) ;
+    } withCancelBlock:^(NSError * _Nonnull error) {
+        NSLog(@"%@",error.debugDescription) ;
+        
     }];
+
+
 }
 //MARK: - TIMER PLAY
 - (void)timerNotification:(NSNotification *)notification
@@ -668,9 +688,7 @@
 }
 -(NSString*)getFullPathWithFileName:(NSString*)fileName
 {
-    NSArray       *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString  *documentsDirectory = [paths objectAtIndex:0];
-    NSString *archivePath = [documentsDirectory stringByAppendingPathComponent:fileName];
+    NSString *archivePath = [[FileHelper applicationDataDirectory] stringByAppendingPathComponent:fileName];
     return archivePath;
 }
 #pragma mark - IDZAudioPlayerDelegate
@@ -813,8 +831,10 @@
     float delta = CGRectGetWidth(self.scroll_View.frame);
     //caculator number page
     arrTotal = [NSMutableArray new];
+    arrTotal = arrCategory;
     //set active
     //
+    /*
     for (int j=0; j < arrCategory.count; j++) {
         NSArray *arrItem = arrCategory[j][@"sounds"];
         for (int i = 0; i <arrItem.count; i = i + deltal) {
@@ -840,6 +860,7 @@
             [arrTotal addObject:dicCategory];
         }
     }
+     */
     //add scroll view
     iNumberCollection = iNumberCollection + (int)arrTotal.count;
     int i = 0;

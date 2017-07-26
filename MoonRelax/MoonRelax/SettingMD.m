@@ -250,9 +250,7 @@ static NSString *identifierMD2 = @"identifierMD2";
 
 -(NSString*)getFullPathWithFileName:(NSString*)fileName
 {
-    NSArray       *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString  *documentsDirectory = [paths objectAtIndex:0];
-    NSString *archivePath = [documentsDirectory stringByAppendingPathComponent:fileName];
+    NSString *archivePath = [[FileHelper applicationDataDirectory] stringByAppendingPathComponent:fileName];
     return archivePath;
 }
 @end

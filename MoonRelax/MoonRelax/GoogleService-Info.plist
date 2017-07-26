@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>97821164344-no7s1tt3cdbcej5sputrouker16feedq.apps.googleusercontent.com</string>
+	<string>523707170571-mhjtook50u9ofoiqq85ano4tppdqjerl.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.97821164344-no7s1tt3cdbcej5sputrouker16feedq</string>
+	<string>com.googleusercontent.apps.523707170571-mhjtook50u9ofoiqq85ano4tppdqjerl</string>
 	<key>API_KEY</key>
-	<string>AIzaSyDdE4dYcPe-M9P3RKSjwpcSaiRPg0KghNI</string>
+	<string>AIzaSyBhoR6QQakQf0vkL9tAHRFUWEaGvGWvtzU</string>
 	<key>GCM_SENDER_ID</key>
-	<string>97821164344</string>
+	<string>523707170571</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.relaf.free</string>
+	<string>com.moonrelaxapp.ios</string>
 	<key>PROJECT_ID</key>
-	<string>relafapp-free-version</string>
+	<string>moonrelaxapp-d00b0</string>
 	<key>STORAGE_BUCKET</key>
-	<string>relafapp-free-version.appspot.com</string>
+	<string>moonrelaxapp-d00b0.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:97821164344:ios:ac36a84388c1e6a7</string>
+	<string>1:523707170571:ios:948a3cc1672ad122</string>
 	<key>DATABASE_URL</key>
-	<string>https://relafapp-free-version.firebaseio.com</string>
+	<string>https://moonrelaxapp-d00b0.firebaseio.com</string>
 </dict>
 </plist>

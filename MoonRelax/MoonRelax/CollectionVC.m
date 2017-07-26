@@ -10,12 +10,14 @@
 #import "CollectionCell.h"
 #import "SpringboardLayout.h"
 #import "Define.h"
-#import "UIImageView+WebCache.h"
+#import "UIImageView+FirebaseStorage.h"
 #import "FileHelper.h"
 #import <StoreKit/StoreKit.h>
 #import "RageIAPHelper.h"
 #import "AppDelegate.h"
 #import "AppCommon.h"
+@import FirebaseStorage;
+
 @interface CollectionVC ()
 {
     NSMutableArray                  *arrCategory;
@@ -27,6 +29,7 @@
     BOOL areBuyCategory;
     NSArray *_products;
     NSString * productIdentifier;
+    FIRStorageReference *imagesRef;
 }
 @end
 @implementation CollectionVC
@@ -107,8 +110,8 @@
     layout.minimumLineSpacing = 0;
     layout.scrollDirection = UICollectionViewScrollDirectionVertical;
     layout.sectionInset = UIEdgeInsetsMake(20, 20, 20, 20);
-    [self.collectionView setShowsHorizontalScrollIndicator:NO];
-    [self.collectionView setShowsVerticalScrollIndicator:NO];
+//    [self.collectionView setShowsHorizontalScrollIndicator:NO];
+//    [self.collectionView setShowsVerticalScrollIndicator:NO];
     self.collectionView.hidden = YES;
     self.vDownLoad.hidden = YES;
     
@@ -122,6 +125,13 @@
     arrMusic  = [NSMutableArray new];
     arrPlayList = [NSMutableArray new];
     areAdsRemoved = VERSION_PRO?1:[[NSUserDefaults standardUserDefaults] boolForKey:kTotalRemoveAdsProductIdentifier];
+    [self getURLImage];
+}
+-(void)getURLImage
+{
+    FIRStorage *storage = [FIRStorage storage];
+    FIRStorageReference *storageRef = [storage reference];
+    imagesRef = [storageRef child:@"img"];
 
 }
 //MARK: - DATA
@@ -301,19 +311,17 @@
             strCover = dicCategory[@"cover"];
             
         }
-        NSURL *url =[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",BASE_IMAGE_URL,strCover]];
-        [self.image sd_setImageWithURL:url placeholderImage: nil completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-        }];
-        
+        // Reference to an image file in Firebase Storage
+        FIRStorageReference *reference = [imagesRef child:strCover];
+        [self.image sd_setImageWithStorageReference:reference placeholderImage:nil];
+
         
     }
     
 }
 -(NSString*)getFullPathWithFileName:(NSString*)fileName
 {
-    NSArray       *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString  *documentsDirectory = [paths objectAtIndex:0];
-    NSString *archivePath = [documentsDirectory stringByAppendingPathComponent:fileName];
+    NSString *archivePath = [[FileHelper applicationDataDirectory] stringByAppendingPathComponent:fileName];
     return archivePath;
 }
 //MARK: -
@@ -415,7 +423,8 @@
     
     cell.lbTitle.text = strTitleShort;
     NSString *fullPath = [self getFullPathWithFileName:[NSString stringWithFormat:@"%@/img/%@",dicCategory[@"path"],dic[@"img"]]];
-    cell.imgIcon.image = [UIImage imageWithContentsOfFile:fullPath];
+    cell.imgIcon.image = [[UIImage imageWithContentsOfFile:fullPath] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    cell.imgIcon.tintColor = [UIColor whiteColor];
     if ([dic[@"active"] boolValue]) {
         cell.imgCheck.hidden = NO;
     }
