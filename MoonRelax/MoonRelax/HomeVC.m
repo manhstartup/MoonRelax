@@ -9,8 +9,6 @@
 #import "HomeVC.h"
 #import "CollectionVC.h"
 #import "SSZipArchive.h"
-#import "IDZTrace.h"
-#import "IDZOggVorbisFileDecoder.h"
 #import "DownLoadCategory.h"
 #import "FileHelper.h"
 #import "Define.h"
@@ -49,9 +47,22 @@
     self.lbSetting.text = str(kuSETTING);
 
     [self showAds];
-    self.imgBackgroundNavigation.backgroundColor = UIColorFromRGB(COLOR_NAVIGATION_HOME);
-    self.imgBackGround.backgroundColor = [UIColor whiteColor];
-    self.vTabVC.backgroundColor = UIColorFromRGB(COLOR_TABBAR_BOTTOM);
+    //
+    [self addShortCutScreen];
+    [self.btnPlus fnSetIcon:@"icon_plus"];
+    self.btnPlus.backgroundColor = UIColorFromRGB(COLOR_BUTTON_PLUS);
+    [self.btnPlus.layer setMasksToBounds:YES];
+    self.btnPlus.layer.cornerRadius = 0;
+
+    //
+    [self.btnPlayer fnSetIcon:@"icon_play_random"];
+    self.btnPlayer.backgroundColor = UIColorFromRGB(COLOR_ICON_ACTIVE);
+
+    //
+    self.imgBackgroundNavigation.backgroundColor = [UIColor clearColor];
+    [self changeColorWithView:self.imgBackGround withHozi: NO withColor:@[(id)UIColorFromRGB(COLOR_BACKGROUND_HOME_TOP).CGColor,(id)UIColorFromRGB(COLOR_BACKGROUND_HOME_BOTTOM).CGColor]];
+
+    self.vTabVC.backgroundColor = UIColorFromAlpha(COLOR_TABBAR_BOTTOM, 0.5);
     self.vTabVC.layer.shadowOffset = CGSizeMake(0, -2);
     self.vTabVC.layer.shadowRadius = 3;
     self.vTabVC.layer.shadowOpacity = 0.4;
@@ -333,7 +344,7 @@
                 }
                 for (int i = 0; i < arrPlayList.count; i ++) {
                     NSDictionary *musicItem = arrPlayList[i];
-                    IDZAQAudioPlayer *player  = musicItem[@"player"];
+                    OGVPlayerView *player  = musicItem[@"player"];
                     [player pause];
                 }
                 
@@ -424,7 +435,7 @@
 {
     for (int i = 0; i < arrPlayList.count; i++) {
         NSDictionary *musicItem = arrPlayList[i];
-        IDZAQAudioPlayer *player  = musicItem[@"player"];
+        OGVPlayerView *player  = musicItem[@"player"];
         [player setVolume:[musicItem[@"music"][@"volume"] floatValue]];
     }
 }
@@ -632,15 +643,15 @@
         NSDictionary *musicItem = arrPlayList[i];
         if ([category[@"id"]intValue]== [musicItem[@"category_id"] intValue]) {
             if (![category[@"manyselect"] boolValue]) {
-                IDZAQAudioPlayer *player  = musicItem[@"player"];
-                [player stop];
+                OGVPlayerView *player  = musicItem[@"player"];
+                [player pause];
                 [arrPlayList removeObjectAtIndex:i];
             }
             else
             {
                 if ([dicMusic[@"id"] intValue] == [musicItem[@"music"][@"id"] intValue]) {
-                    IDZAQAudioPlayer *player  = musicItem[@"player"];
-                    [player stop];
+                    OGVPlayerView *player  = musicItem[@"player"];
+                    [player pause];
                     [arrPlayList removeObjectAtIndex:i];
                     break;
                 }
@@ -655,19 +666,15 @@
         }
         
         NSString *path = [self getFullPathWithFileName:[NSString stringWithFormat:@"%@/sound/%@",category_name,dicMusic[@"sound"]]];
-        NSError* error = nil;
-        NSURL* url = [NSURL fileURLWithPath:path];
-        
-        IDZOggVorbisFileDecoder* decoder = [[IDZOggVorbisFileDecoder alloc] initWithContentsOfURL:url error:&error];
-        NSLog(@"Ogg Vorbis file duration is %g", decoder.duration);
-        IDZAQAudioPlayer *player = [[IDZAQAudioPlayer alloc] initWithDecoder:decoder error:nil];
-        [player setVolume:[dicMusic[@"volume"] floatValue]];
-        if(!player)
-        {
-            NSLog(@"Error creating player: %@", error);
-        }
+        NSURL *url = [NSURL fileURLWithPath:path];
+
+        OGVPlayerView *player = [[OGVPlayerView alloc] initWithFrame:CGRectZero];
+        [self.view addSubview:player];
         player.delegate = self;
-        [player prepareToPlay];
+        player.sourceURL = url;
+        [player setVolume:[dicMusic[@"volume"] floatValue]];
+        [player play];
+
         
         NSMutableDictionary *dic = [NSMutableDictionary new];
         [dic setObject:player forKey:@"player"];
@@ -676,31 +683,45 @@
         [arrPlayList addObject:dic];
         
     }
-    [self performSelector:@selector(playMusic) withObject:nil afterDelay:0.04];
+//    [self performSelector:@selector(playMusic) withObject:nil afterDelay:0.04];
     
 }
--(void)playMusic
+
+//-(void)playMusic
+//{
+//    for (NSDictionary *dicMusic in arrPlayList) {
+//        OGVPlayerView *player  = dicMusic[@"player"];
+//        [player play];
+//    }
+//}
+#pragma mark - OGVPlayerDelegate methods
+
+- (void)ogvPlayerDidLoadMetadata:(OGVPlayerView *)sender
 {
-    for (NSDictionary *dicMusic in arrPlayList) {
-        IDZAQAudioPlayer *player  = dicMusic[@"player"];
-        [player play];
-    }
+
 }
+
+- (void)ogvPlayerDidEnd:(OGVPlayerView *)sender
+{
+    [sender play];
+    // temp: do nothing
+    /*
+     NSInteger nextSource = selectedSource + 1;
+     if (nextSource < [sources count]) {
+     [self.tableView selectRowAtIndexPath:[NSIndexPath indexPathForItem:nextSource inSection:0]
+     animated:YES
+     scrollPosition:UITableViewScrollPositionNone];
+     [self selectSource:nextSource];
+     }
+     */
+}
+
 -(NSString*)getFullPathWithFileName:(NSString*)fileName
 {
     NSString *archivePath = [[FileHelper applicationDataDirectory] stringByAppendingPathComponent:fileName];
     return archivePath;
 }
-#pragma mark - IDZAudioPlayerDelegate
-- (void)audioPlayerDidFinishPlaying:(id<IDZAudioPlayer>)player successfully:(BOOL)flag
-{
-    NSLog(@"%s successfully=%@", __PRETTY_FUNCTION__, flag ? @"YES"  : @"NO");
-}
 
-- (void)audioPlayerDecodeErrorDidOccur:(id<IDZAudioPlayer>)player error:(NSError *)error
-{
-    NSLog(@"%s error=%@", __PRETTY_FUNCTION__, error);
-}
 //MARK: -CLICK ITEM MUSIC
 -(void)clickItemAction:(NSDictionary *)dicMusic dicCategory:(NSDictionary *)dicCategory isLongTap:( BOOL )isLongTap
 {
@@ -1108,6 +1129,7 @@
 
 -(IBAction)tabBottomVCAction:(id)sender
 {
+    
     [self.vFavorite dismissView];
     [self.vAddFavorite dismissView];
     [self.vTimer dismissView];
@@ -1133,8 +1155,8 @@
                 //get state befor
                 if (arrPlayList.count > 0) {
                     NSDictionary *musicItem = arrPlayList[0];
-                    IDZAQAudioPlayer *player  = musicItem[@"player"];
-                    if (player.state == IDZAudioPlayerStatePlaying) {
+                    OGVPlayerView *player  = musicItem[@"player"];
+                    if (player.paused == false) {
                         _buttonType = BUTTON_PLAYING;
                     }
                     else
@@ -1155,7 +1177,7 @@
                         _buttonType = BUTTON_PAUSE;
                         for (int i = 0; i < arrPlayList.count; i ++) {
                             NSDictionary *musicItem = arrPlayList[i];
-                            IDZAQAudioPlayer *player  = musicItem[@"player"];
+                            OGVPlayerView *player  = musicItem[@"player"];
                             [player pause];
                         }
                     }
@@ -1171,7 +1193,7 @@
                         _buttonType = BUTTON_PLAYING;
                         for (int i = 0; i < arrPlayList.count; i ++) {
                             NSDictionary *musicItem = arrPlayList[i];
-                            IDZAQAudioPlayer *player  = musicItem[@"player"];
+                            OGVPlayerView *player  = musicItem[@"player"];
                             [player play];
                         }
                     }
@@ -1213,6 +1235,7 @@
             break;
     }
     [self fnSetButtonBottom];
+    
 }
 
 -(void) addSubViewFavorite
@@ -1280,7 +1303,7 @@
     self.imgFavoriteActive.hidden = YES;
     
     //home
-    self.imgHome.image = [UIImage imageNamed:@"backtohome"];
+    [self.btnPlayer fnSetIcon:@"icon_play_home_back"];
     
     //timer
     self.lbTimer.textColor = UIColorFromRGB(COLOR_TEXT_ITEM);
@@ -1311,22 +1334,25 @@
             break;
         case BUTTON_RANDOM:
         {
-            self.imgHome.image = [UIImage imageNamed:@"playradom"];
+            [self.btnPlayer fnSetIcon:@"icon_play_random"];
         }
             break;
         case BUTTON_BACK_HOME:
         {
-            self.imgHome.image = [UIImage imageNamed:@"backtohome"];
+            [self.btnPlayer fnSetIcon:@"icon_play_home_back"];
+
         }
             break;
         case BUTTON_PAUSE:
         {
-            self.imgHome.image = [UIImage imageNamed:@"pause"];
+            [self.btnPlayer fnSetIcon:@"icon_play_pause"];
+
         }
             break;
         case BUTTON_PLAYING:
         {
-            self.imgHome.image = [UIImage imageNamed:@"playing"];
+            [self.btnPlayer fnSetIcon:@"icon_play_play"];
+
         }
             break;
         case BUTTON_TIMER:
@@ -1617,5 +1643,110 @@
                           }];
     }
 
+}
+//MARK: - Set Color View Gradient
+-(void)changeColorWithView:(UIView*)subview withHozi:(BOOL)isHozi withColor:(NSArray*)arrColor
+{
+    [UIView animateWithDuration:0.01
+                          delay:0
+                        options: 0
+                     animations:^
+     {
+         [subview layoutIfNeeded]; // Called on parent view
+     }
+                     completion:^(BOOL finished)
+     {
+         CAGradientLayer *gradient = [CAGradientLayer layer];
+         if (isHozi) {
+             gradient.startPoint = CGPointMake(0.0, 0.5);
+             gradient.endPoint = CGPointMake(1.0, 0.5);
+         }
+         else
+         {
+             gradient.startPoint = CGPointMake(0.0, 0.0);
+             gradient.endPoint = CGPointMake(1.0, 1.0);
+         }
+         gradient.frame = subview.bounds;
+         gradient.colors = arrColor;//@[(id)[UIColor whiteColor].CGColor, (id)[UIColor blackColor].CGColor];
+         if ([[[subview.layer sublayers] objectAtIndex:0] isKindOfClass:[CAGradientLayer class]]) {
+             [subview.layer replaceSublayer:[[subview.layer sublayers] objectAtIndex:0]
+                                       with:gradient];
+         }
+         else
+         {
+             [subview.layer insertSublayer:gradient atIndex:0];
+         }
+     }];
+    
+}
+//MARK - Short cut
+-(void) addShortCutScreen
+{
+    __weak typeof(self) wself = self;
+    self.btnPlus.hidden = NO;
+    self.viewShortCutScreen = [[ShortcutScreenVC alloc] initWithEVC:self];
+    [self.viewShortCutScreen setCallback:^(SHORTCUT_ACTION_TYPE type)
+     {
+         wself.btnPlus.hidden = NO;
+         UIButton *button = [UIButton new];
+         
+         switch (type) {
+             case SHORTCUT_ACTION_VOLUME:
+             {
+                 [wself volumeAction:nil];
+             }
+                 break;
+             case SHORTCUT_ACTION_FAVORISTE:
+             {
+                 button.tag = 11;
+                 [wself tabBottomVCAction:button];
+             }
+                 break;
+             case SHORTCUT_ACTION_TIMER:
+             {
+                 button.tag = 13;
+                 [wself tabBottomVCAction:button];
+
+             }
+                 break;
+             case SHORTCUT_ACTION_INFO:
+             {
+                 button.tag = 14;
+                 [wself tabBottomVCAction:button];
+
+             }
+                 break;
+             default:
+                 break;
+         }
+     }];
+    self.viewShortCutScreen.constraintBottomCloseButton.constant = 0;
+    self.viewShortCutScreen.constraintTraillingCloseButton.constant = 0;
+    [self.viewShortCutScreen addContraintSupview:self.view];
+    self.viewShortCutScreen.hidden = YES;
+    //    [self.viewShortCutScreen fnAllowAdd:allow_add];
+    [self.viewShortCutScreen fnAllowAdd:true];
+    
+}
+-(IBAction)fnShortCutScreen:(id)sender
+{
+    
+    
+    [UIView animateWithDuration:0.2 delay:0.0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+        self.btnPlus.layer.transform = CATransform3DMakeRotation((180) * 45, 0, 0, 1);
+        
+        
+    } completion:^(BOOL finished) {
+        
+        //finish rotate:
+        self.btnPlus.hidden = YES;
+        [self.viewShortCutScreen hide:NO];
+        [self returnRotation];
+    }];
+}
+-(void) returnRotation{
+    [UIView animateWithDuration:0.1 animations:^{
+        self.btnPlus.transform = CGAffineTransformIdentity;
+    }];
 }
 @end

@@ -1,0 +1,63 @@
+#
+# Export file for libskeleton
+#
+# Only the symbols listed in the global section will be callable from
+# applications linking to libskeleton.
+#
+
+@PACKAGE@.so
+{
+	global:
+		oggskel_new;
+		oggskel_destroy;
+		oggskel_encode_header;
+		oggskel_encode_add_stream;
+		oggskel_decode_header;
+		
+		oggskel_get_ver_maj;
+		oggskel_get_ver_min;
+
+		oggskel_get_ptime_num;
+		oggskel_set_ptime_num;
+
+		oggskel_get_ptime_denum;
+		oggskel_set_ptime_denum;
+
+		oggskel_get_btime_num;
+		oggskel_set_btime_num;
+
+		oggskel_get_btime_denum;
+		oggskel_set_btime_denum;
+
+		oggskel_get_utc;
+		oggskel_set_utc;
+
+		oggskel_get_segment_len;
+		oggskel_get_non_header_offset;
+
+		oggskel_get_num_headers;
+		oggskel_set_num_headers;
+
+		oggskel_get_granule_num;
+		oggskel_set_granule_num;
+
+		oggskel_get_granule_denum;
+		oggskel_set_granule_denum;
+
+		oggskel_get_start_granule;
+		oggskel_set_start_granule;
+
+		oggskel_get_preroll;
+		oggskel_set_preroll;
+
+		oggskel_get_granule_shift;
+		oggskel_set_granule_shift;
+
+		oggskel_get_msg_header;
+		oggskel_set_msg_header;
+		
+		oggskel_get_keypoint_offset;
+		
+	local:
+		*;
+};

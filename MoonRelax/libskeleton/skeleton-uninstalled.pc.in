@@ -1,0 +1,12 @@
+prefix=
+exec_prefix=
+libdir=${pcfiledir}/src
+includedir=${pcfiledir}/include
+
+Name: skeleton
+Description: A library for reading and writing Ogg skeleton data.
+URL: http://xiph.org/skeleton
+Requires:
+Version: @VERSION@
+Libs: -L${libdir} -lskeleton -logg
+Cflags: -I${includedir}

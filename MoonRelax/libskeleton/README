@@ -1,0 +1,14 @@
+libskeleton is a library for reading and writing Ogg Skeleton data.
+
+::: About Skeleton
+
+Ogg Skeleton provides structuring information for multitrack Ogg files. 
+It is compatible with Ogg Theora and provides extra clues for 
+synchronization and content negotiation such as language selection.
+Skeleton bitstream version 3.2 or above specifies an indexing
+method for Ogg segments. The index headers of the skeleton bitstream
+provide an index of periodic keyframes for every content stream in an Ogg segment.
+
+For detailed information
+ . ..about Skeleton check :: http://wiki.xiph.org/Ogg_Skeleton
+ . ..about Ogg indexing :: http://wiki.xiph.org/Ogg_Index

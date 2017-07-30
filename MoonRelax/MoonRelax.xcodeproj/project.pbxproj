@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A4F585A5574166B27E2AA139 /* libPods-MoonRelax.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE89FE7AC647B07087311BED /* libPods-MoonRelax.a */; };
+		1D0ED3525F8762107D52C03F /* Pods_MoonRelax.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC54E31E0A4BD0FF5D2E34BE /* Pods_MoonRelax.framework */; };
 		EB0582591D9C0D2200E29C9B /* SpringboardLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = EB0582581D9C0D2200E29C9B /* SpringboardLayout.m */; };
 		EB06D40B1DE153AA00C20784 /* WelcomeScreenVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EB06D4091DE153AA00C20784 /* WelcomeScreenVC.m */; };
 		EB06D40C1DE153AA00C20784 /* WelcomeScreenVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB06D40A1DE153AA00C20784 /* WelcomeScreenVC.xib */; };
@@ -101,6 +101,11 @@
 		EB82DDE91DE1F5AC0029D110 /* iRate.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EB82DDE51DE1F5AC0029D110 /* iRate.bundle */; };
 		EB82DDEA1DE1F5AC0029D110 /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB82DDE71DE1F5AC0029D110 /* iRate.m */; };
 		EB82DDED1DE1F81E0029D110 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EB82DDEF1DE1F81E0029D110 /* Localizable.strings */; };
+		EB8DAFF91F2DA524005570F6 /* MDButtonIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = EB8DAFF81F2DA524005570F6 /* MDButtonIcon.m */; };
+		EB8DB0001F2DB977005570F6 /* ShortcutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EB8DAFFB1F2DB977005570F6 /* ShortcutCell.m */; };
+		EB8DB0011F2DB977005570F6 /* ShortcutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB8DAFFC1F2DB977005570F6 /* ShortcutCell.xib */; };
+		EB8DB0021F2DB977005570F6 /* ShortcutScreenVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EB8DAFFE1F2DB977005570F6 /* ShortcutScreenVC.m */; };
+		EB8DB0031F2DB977005570F6 /* ShortcutScreenVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB8DAFFF1F2DB977005570F6 /* ShortcutScreenVC.xib */; };
 		EBA0160A1DB6C83700D5477C /* TabVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBA016071DB6C83700D5477C /* TabVC.xib */; };
 		EBA0160B1DB6C83700D5477C /* TabVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA016091DB6C83700D5477C /* TabVC.m */; };
 		EBC18F591DA0F508000E00FD /* DownLoadCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC18F581DA0F508000E00FD /* DownLoadCategory.m */; };
@@ -135,20 +140,12 @@
 		EBFF142F1DA01E4700CA98F1 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = EBFF141A1DA01E4600CA98F1 /* unzip.c */; };
 		EBFF14301DA01E4700CA98F1 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = EBFF141C1DA01E4600CA98F1 /* zip.c */; };
 		EBFF14321DA01E4700CA98F1 /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = EBFF14201DA01E4600CA98F1 /* SSZipArchive.m */; };
-		EBFF14621DA04B7E00CA98F1 /* Ogg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBFF14601DA04B7E00CA98F1 /* Ogg.framework */; };
-		EBFF14631DA04B7E00CA98F1 /* Vorbis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBFF14611DA04B7E00CA98F1 /* Vorbis.framework */; };
-		EBFF14741DA04C2800CA98F1 /* IDZAQAudioPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBFF14651DA04C2800CA98F1 /* IDZAQAudioPlayerViewController.xib */; };
-		EBFF14751DA04C2800CA98F1 /* IDZAudioPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBFF14671DA04C2800CA98F1 /* IDZAudioPlayerViewController.xib */; };
-		EBFF14761DA04C2800CA98F1 /* IDZAQAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EBFF146A1DA04C2800CA98F1 /* IDZAQAudioPlayer.m */; };
-		EBFF14771DA04C2800CA98F1 /* IDZAQAudioPlayerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EBFF146C1DA04C2800CA98F1 /* IDZAQAudioPlayerAppDelegate.m */; };
-		EBFF14781DA04C2800CA98F1 /* IDZAudioPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBFF14701DA04C2800CA98F1 /* IDZAudioPlayerViewController.m */; };
-		EBFF14791DA04C2800CA98F1 /* IDZOggVorbisFileDecoder.mm in Sources */ = {isa = PBXBuildFile; fileRef = EBFF14721DA04C2800CA98F1 /* IDZOggVorbisFileDecoder.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		05E7C820D1B24585F963E568 /* Pods-MoonRelax.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoonRelax.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MoonRelax/Pods-MoonRelax.debug.xcconfig"; sourceTree = "<group>"; };
 		0C0B061630A6DDFA59C76042 /* Pods-MoonRelax.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoonRelax.release.xcconfig"; path = "Pods/Target Support Files/Pods-MoonRelax/Pods-MoonRelax.release.xcconfig"; sourceTree = "<group>"; };
-		DE89FE7AC647B07087311BED /* libPods-MoonRelax.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MoonRelax.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC54E31E0A4BD0FF5D2E34BE /* Pods_MoonRelax.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoonRelax.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB0582571D9C0D2200E29C9B /* SpringboardLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpringboardLayout.h; sourceTree = "<group>"; };
 		EB0582581D9C0D2200E29C9B /* SpringboardLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpringboardLayout.m; sourceTree = "<group>"; };
 		EB06D4081DE153A900C20784 /* WelcomeScreenVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeScreenVC.h; sourceTree = "<group>"; };
@@ -293,6 +290,14 @@
 		EB82DDF21DE1F8670029D110 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		EB82DDF31DE1F8700029D110 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		EB82DDF41DE1F8910029D110 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EB8DAFF71F2DA524005570F6 /* MDButtonIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDButtonIcon.h; sourceTree = "<group>"; };
+		EB8DAFF81F2DA524005570F6 /* MDButtonIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDButtonIcon.m; sourceTree = "<group>"; };
+		EB8DAFFA1F2DB977005570F6 /* ShortcutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShortcutCell.h; sourceTree = "<group>"; };
+		EB8DAFFB1F2DB977005570F6 /* ShortcutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShortcutCell.m; sourceTree = "<group>"; };
+		EB8DAFFC1F2DB977005570F6 /* ShortcutCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShortcutCell.xib; sourceTree = "<group>"; };
+		EB8DAFFD1F2DB977005570F6 /* ShortcutScreenVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShortcutScreenVC.h; sourceTree = "<group>"; };
+		EB8DAFFE1F2DB977005570F6 /* ShortcutScreenVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShortcutScreenVC.m; sourceTree = "<group>"; };
+		EB8DAFFF1F2DB977005570F6 /* ShortcutScreenVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShortcutScreenVC.xib; sourceTree = "<group>"; };
 		EBA016071DB6C83700D5477C /* TabVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabVC.xib; sourceTree = "<group>"; };
 		EBA016081DB6C83700D5477C /* TabVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabVC.h; sourceTree = "<group>"; };
 		EBA016091DB6C83700D5477C /* TabVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabVC.m; sourceTree = "<group>"; };
@@ -363,21 +368,6 @@
 		EBFF14201DA01E4600CA98F1 /* SSZipArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSZipArchive.m; sourceTree = "<group>"; };
 		EBFF14211DA01E4700CA98F1 /* SSZipCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSZipCommon.h; sourceTree = "<group>"; };
 		EBFF14221DA01E4700CA98F1 /* ZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipArchive.h; sourceTree = "<group>"; };
-		EBFF14601DA04B7E00CA98F1 /* Ogg.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Ogg.framework; path = Frameworks/Ogg.framework; sourceTree = "<group>"; };
-		EBFF14611DA04B7E00CA98F1 /* Vorbis.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Vorbis.framework; path = Frameworks/Vorbis.framework; sourceTree = "<group>"; };
-		EBFF14661DA04C2800CA98F1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/IDZAQAudioPlayerViewController.xib; sourceTree = "<group>"; };
-		EBFF14681DA04C2800CA98F1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/IDZAudioPlayerViewController.xib; sourceTree = "<group>"; };
-		EBFF14691DA04C2800CA98F1 /* IDZAQAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDZAQAudioPlayer.h; sourceTree = "<group>"; };
-		EBFF146A1DA04C2800CA98F1 /* IDZAQAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDZAQAudioPlayer.m; sourceTree = "<group>"; };
-		EBFF146B1DA04C2800CA98F1 /* IDZAQAudioPlayerAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDZAQAudioPlayerAppDelegate.h; sourceTree = "<group>"; };
-		EBFF146C1DA04C2800CA98F1 /* IDZAQAudioPlayerAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDZAQAudioPlayerAppDelegate.m; sourceTree = "<group>"; };
-		EBFF146D1DA04C2800CA98F1 /* IDZAudioDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDZAudioDecoder.h; sourceTree = "<group>"; };
-		EBFF146E1DA04C2800CA98F1 /* IDZAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDZAudioPlayer.h; sourceTree = "<group>"; };
-		EBFF146F1DA04C2800CA98F1 /* IDZAudioPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDZAudioPlayerViewController.h; sourceTree = "<group>"; };
-		EBFF14701DA04C2800CA98F1 /* IDZAudioPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDZAudioPlayerViewController.m; sourceTree = "<group>"; };
-		EBFF14711DA04C2800CA98F1 /* IDZOggVorbisFileDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDZOggVorbisFileDecoder.h; sourceTree = "<group>"; };
-		EBFF14721DA04C2800CA98F1 /* IDZOggVorbisFileDecoder.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = IDZOggVorbisFileDecoder.mm; sourceTree = "<group>"; };
-		EBFF14731DA04C2800CA98F1 /* IDZTrace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDZTrace.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -390,13 +380,11 @@
 				EB420B131DAD630600F47C8B /* CoreGraphics.framework in Frameworks */,
 				EB4BE3D61DA8193F006E6803 /* MessageUI.framework in Frameworks */,
 				EB4BE3D41DA817D3006E6803 /* Social.framework in Frameworks */,
-				EBFF14621DA04B7E00CA98F1 /* Ogg.framework in Frameworks */,
-				EBFF14631DA04B7E00CA98F1 /* Vorbis.framework in Frameworks */,
 				EBFF13F81DA01D7500CA98F1 /* libz.tbd in Frameworks */,
 				EB44B5121DB7CFA0007E0C93 /* StoreKit.framework in Frameworks */,
 				EB11EE6A1D9AF45000804D34 /* QuartzCore.framework in Frameworks */,
 				EB11EE591D9ADAFF00804D34 /* AVFoundation.framework in Frameworks */,
-				A4F585A5574166B27E2AA139 /* libPods-MoonRelax.a in Frameworks */,
+				1D0ED3525F8762107D52C03F /* Pods_MoonRelax.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,13 +465,11 @@
 				EB420B121DAD630600F47C8B /* CoreGraphics.framework */,
 				EB4BE3D51DA8193F006E6803 /* MessageUI.framework */,
 				EB4BE3D31DA817D3006E6803 /* Social.framework */,
-				EBFF14601DA04B7E00CA98F1 /* Ogg.framework */,
-				EBFF14611DA04B7E00CA98F1 /* Vorbis.framework */,
 				EBFF13F61DA01D1100CA98F1 /* libz.1.tbd */,
 				EBFF13F41DA01CFA00CA98F1 /* libz.tbd */,
 				EB11EE691D9AF45000804D34 /* QuartzCore.framework */,
 				EB11EE581D9ADAFF00804D34 /* AVFoundation.framework */,
-				DE89FE7AC647B07087311BED /* libPods-MoonRelax.a */,
+				CC54E31E0A4BD0FF5D2E34BE /* Pods_MoonRelax.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -601,6 +587,14 @@
 				EB3B17361DBB270C00B26A10 /* UIAlertView+Blocks.m */,
 				EB23A9D71DE0D58B002465E4 /* UIImage+ProportionalFill.h */,
 				EB23A9D81DE0D58B002465E4 /* UIImage+ProportionalFill.m */,
+				EB8DAFF71F2DA524005570F6 /* MDButtonIcon.h */,
+				EB8DAFF81F2DA524005570F6 /* MDButtonIcon.m */,
+				EB8DAFFA1F2DB977005570F6 /* ShortcutCell.h */,
+				EB8DAFFB1F2DB977005570F6 /* ShortcutCell.m */,
+				EB8DAFFC1F2DB977005570F6 /* ShortcutCell.xib */,
+				EB8DAFFD1F2DB977005570F6 /* ShortcutScreenVC.h */,
+				EB8DAFFE1F2DB977005570F6 /* ShortcutScreenVC.m */,
+				EB8DAFFF1F2DB977005570F6 /* ShortcutScreenVC.xib */,
 				EB605EC41DD0D37D007802A1 /* AppCommon.h */,
 				EB605EC51DD0D37D007802A1 /* AppCommon.m */,
 				EB605EC71DD0D3A8007802A1 /* Reachability.h */,
@@ -621,7 +615,6 @@
 				EB56B60E1DA2C497001AFC87 /* FileHelper.m */,
 				EB2552DE1DA6ABD900FD4BC4 /* MDTimerBackGround.h */,
 				EB2552DF1DA6ABD900FD4BC4 /* MDTimerBackGround.m */,
-				EBFF14641DA04C2800CA98F1 /* IDZAQAudioPlayer */,
 				EBFF13FC1DA01E4600CA98F1 /* SSZipArchive */,
 				EBFF13A91DA00E1700CA98F1 /* AFNetworking */,
 				EB11EE631D9AEBCF00804D34 /* Nav */,
@@ -819,26 +812,6 @@
 			path = minizip;
 			sourceTree = "<group>";
 		};
-		EBFF14641DA04C2800CA98F1 /* IDZAQAudioPlayer */ = {
-			isa = PBXGroup;
-			children = (
-				EBFF14651DA04C2800CA98F1 /* IDZAQAudioPlayerViewController.xib */,
-				EBFF14671DA04C2800CA98F1 /* IDZAudioPlayerViewController.xib */,
-				EBFF14691DA04C2800CA98F1 /* IDZAQAudioPlayer.h */,
-				EBFF146A1DA04C2800CA98F1 /* IDZAQAudioPlayer.m */,
-				EBFF146B1DA04C2800CA98F1 /* IDZAQAudioPlayerAppDelegate.h */,
-				EBFF146C1DA04C2800CA98F1 /* IDZAQAudioPlayerAppDelegate.m */,
-				EBFF146D1DA04C2800CA98F1 /* IDZAudioDecoder.h */,
-				EBFF146E1DA04C2800CA98F1 /* IDZAudioPlayer.h */,
-				EBFF146F1DA04C2800CA98F1 /* IDZAudioPlayerViewController.h */,
-				EBFF14701DA04C2800CA98F1 /* IDZAudioPlayerViewController.m */,
-				EBFF14711DA04C2800CA98F1 /* IDZOggVorbisFileDecoder.h */,
-				EBFF14721DA04C2800CA98F1 /* IDZOggVorbisFileDecoder.mm */,
-				EBFF14731DA04C2800CA98F1 /* IDZTrace.h */,
-			);
-			path = IDZAQAudioPlayer;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -930,10 +903,10 @@
 				EB4BE3DB1DA81A9B006E6803 /* SettingAbout.xib in Resources */,
 				EB3071F61DABE2B6009D90DD /* Roboto-BoldItalic.ttf in Resources */,
 				EB3072021DABE2B6009D90DD /* RobotoCondensed-Light.ttf in Resources */,
+				EB8DB0031F2DB977005570F6 /* ShortcutScreenVC.xib in Resources */,
 				EB3071FB1DABE2B6009D90DD /* Roboto-MediumItalic.ttf in Resources */,
 				EB82DDE91DE1F5AC0029D110 /* iRate.bundle in Resources */,
 				EBA0160A1DB6C83700D5477C /* TabVC.xib in Resources */,
-				EBFF14751DA04C2800CA98F1 /* IDZAudioPlayerViewController.xib in Resources */,
 				EB14BA6E1DA16FCA00385759 /* VolumeItem.xib in Resources */,
 				EB4C7FDC1DA3F3BF003CD3D6 /* TimerCell.xib in Resources */,
 				EB3071FE1DABE2B6009D90DD /* Roboto-ThinItalic.ttf in Resources */,
@@ -964,9 +937,9 @@
 				EB4C7FDE1DA3F3BF003CD3D6 /* CreaterTimer.xib in Resources */,
 				EB3071F31DABE2B6009D90DD /* Roboto-Black.ttf in Resources */,
 				EB19A4AB1DE1811600F0A5D4 /* SettingHeaderCell.xib in Resources */,
+				EB8DB0011F2DB977005570F6 /* ShortcutCell.xib in Resources */,
 				EB3071F91DABE2B6009D90DD /* Roboto-LightItalic.ttf in Resources */,
 				EB3072041DABE2B6009D90DD /* RobotoCondensed-Regular.ttf in Resources */,
-				EBFF14741DA04C2800CA98F1 /* IDZAQAudioPlayerViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1028,17 +1001,14 @@
 				EB56B6131DA2C697001AFC87 /* AddFavoriteView.m in Sources */,
 				EB56B6001DA2B958001AFC87 /* AHTag.m in Sources */,
 				EBC18F591DA0F508000E00FD /* DownLoadCategory.m in Sources */,
-				EBFF14761DA04C2800CA98F1 /* IDZAQAudioPlayer.m in Sources */,
 				EB56B60F1DA2C497001AFC87 /* FileHelper.m in Sources */,
 				EB137BA41DBBD42500DB1EBB /* IAPHelper.m in Sources */,
 				EB4C7FDB1DA3F3BF003CD3D6 /* TimerCell.m in Sources */,
 				EB140DB51DB54830006E6FD9 /* ASPopUpView.m in Sources */,
-				EBFF14791DA04C2800CA98F1 /* IDZOggVorbisFileDecoder.mm in Sources */,
 				EBFB07A91D9EA08700AF2569 /* TimerView.m in Sources */,
 				EB11EDC91D9AB24900804D34 /* AppDelegate.m in Sources */,
 				EB82DDEA1DE1F5AC0029D110 /* iRate.m in Sources */,
 				EBFB07B31D9EA1F000AF2569 /* BaseView.m in Sources */,
-				EBFF14771DA04C2800CA98F1 /* IDZAQAudioPlayerAppDelegate.m in Sources */,
 				EBFF14241DA01E4700CA98F1 /* aeskey.c in Sources */,
 				EB4BE3E71DA81E42006E6803 /* SettingUpdate.m in Sources */,
 				EBA0160B1DB6C83700D5477C /* TabVC.m in Sources */,
@@ -1046,6 +1016,7 @@
 				EBFF142E1DA01E4700CA98F1 /* mztools.c in Sources */,
 				EB4C7FDD1DA3F3BF003CD3D6 /* CreaterTimer.m in Sources */,
 				EB81C1FD1F27B0CB003182C2 /* UIImageView+FirebaseStorage.m in Sources */,
+				EB8DAFF91F2DA524005570F6 /* MDButtonIcon.m in Sources */,
 				EB19A4B71DE19C7B00F0A5D4 /* SettingMD.m in Sources */,
 				EBFF14261DA01E4700CA98F1 /* entropy.c in Sources */,
 				EB420B111DAD609500F47C8B /* UIImage+TBTint.m in Sources */,
@@ -1056,6 +1027,7 @@
 				EB17B9831DB12B6D007DBFDF /* MCNewCustomLayeredView.m in Sources */,
 				EB4BE3D91DA81A93006E6803 /* SettingAbout.m in Sources */,
 				EBFF142D1DA01E4700CA98F1 /* ioapi.c in Sources */,
+				EB8DB0001F2DB977005570F6 /* ShortcutCell.m in Sources */,
 				EBFF13BA1DA00E1700CA98F1 /* AFURLRequestSerialization.m in Sources */,
 				EB605EC61DD0D37D007802A1 /* AppCommon.m in Sources */,
 				EB17B9851DB12B6D007DBFDF /* MCSliceLayer.m in Sources */,
@@ -1066,6 +1038,7 @@
 				EB137BA71DBBD42B00DB1EBB /* RageIAPHelper.m in Sources */,
 				EBFF14251DA01E4700CA98F1 /* aestab.c in Sources */,
 				EB4BE3EA1DA8280B006E6803 /* NSDate+Extensions.m in Sources */,
+				EB8DB0021F2DB977005570F6 /* ShortcutScreenVC.m in Sources */,
 				EB3B17371DBB270C00B26A10 /* UIAlertView+Blocks.m in Sources */,
 				EB56B6091DA2B964001AFC87 /* AHTagsLabel.m in Sources */,
 				EB17B9861DB12B6D007DBFDF /* MCUtil.m in Sources */,
@@ -1084,7 +1057,6 @@
 				EBFF13BC1DA00E1700CA98F1 /* AFURLSessionManager.m in Sources */,
 				EBFF14231DA01E4700CA98F1 /* aescrypt.c in Sources */,
 				EB11EDFF1D9AB30B00804D34 /* HomeVC.m in Sources */,
-				EBFF14781DA04C2800CA98F1 /* IDZAudioPlayerViewController.m in Sources */,
 				EB17B9821DB12B6D007DBFDF /* MCNewCustomLayer.m in Sources */,
 				EB2552E01DA6ABD900FD4BC4 /* MDTimerBackGround.m in Sources */,
 				EB17B9841DB12B6D007DBFDF /* MCPercentageDoughnutView.m in Sources */,
@@ -1115,22 +1087,6 @@
 				EB82DDF41DE1F8910029D110 /* vi */,
 			);
 			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-		EBFF14651DA04C2800CA98F1 /* IDZAQAudioPlayerViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EBFF14661DA04C2800CA98F1 /* en */,
-			);
-			name = IDZAQAudioPlayerViewController.xib;
-			sourceTree = "<group>";
-		};
-		EBFF14671DA04C2800CA98F1 /* IDZAudioPlayerViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EBFF14681DA04C2800CA98F1 /* en */,
-			);
-			name = IDZAudioPlayerViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1252,7 +1208,25 @@
 				INFOPLIST_FILE = MoonRelax/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"OGVKit\"",
+					"-framework",
+					"\"VPX\"",
+					"-framework",
+					"\"libopus\"",
+					"-framework",
+					"\"nestegg\"",
+					"-framework",
+					"\"ogg\"",
+					"-framework",
+					"\"oggz\"",
+					"-framework",
+					"\"theora\"",
+					"-framework",
+					"\"vorbis\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.moonrelaxapp.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1278,7 +1252,25 @@
 				INFOPLIST_FILE = MoonRelax/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"OGVKit\"",
+					"-framework",
+					"\"VPX\"",
+					"-framework",
+					"\"libopus\"",
+					"-framework",
+					"\"nestegg\"",
+					"-framework",
+					"\"ogg\"",
+					"-framework",
+					"\"oggz\"",
+					"-framework",
+					"\"theora\"",
+					"-framework",
+					"\"vorbis\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.moonrelaxapp.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

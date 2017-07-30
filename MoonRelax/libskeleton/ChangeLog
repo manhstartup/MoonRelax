@@ -1,0 +1,6 @@
+0.1.0 - 26 march 2010
+  - Initial release of libskeleton.
+  - It can decode skeleton bitstream version 3.3 or earlier,
+    including index packets.
+  - Currently it can only encode skeleton bitstream version 3.0,
+    i.e. indexing is not supported, yet.

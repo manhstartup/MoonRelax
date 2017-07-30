@@ -1,0 +1,13 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+includedir=@includedir@
+
+Name: skeleton
+Description: A library for reading and writing Ogg skeleton data.
+URL: http://xiph.org/skeleton
+Requires: ogg
+Version: @VERSION@
+Libs: -L${libdir} -lskeleton
+Libs.private: -logg
+Cflags: -I${includedir}

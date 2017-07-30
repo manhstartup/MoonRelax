@@ -6,20 +6,22 @@
 //  Copyright © 2016 JoJo. All rights reserved.
 //
 
-#import <AVFoundation/AVFoundation.h>
+//#import <AVFoundation/AVFoundation.h>
 #import "FavoriteView.h"
 #import "TimerView.h"
 #import "SettingView.h"
 #import "VolumeView.h"
 #import "VolumeItem.h"
 #import "AFHTTPSessionManager.h"
-#import "IDZAQAudioPlayer.h"
 #import "AddFavoriteView.h"
 #import "ASProgressPopUpView.h"
 #import "TabVC.h"
+#import <OGVKit/OGVKit.h>
+#import "MDButtonIcon.h"
+#import "ShortcutScreenVC.h"
 @class RBVolumeButtons;
 @class GADBannerView;
-@interface HomeVC : UIViewController<AVAudioPlayerDelegate, IDZAudioPlayerDelegate>
+@interface HomeVC : UIViewController<AVAudioPlayerDelegate, OGVPlayerDelegate>
 {
     AFURLSessionManager *manager;
     AFHTTPSessionManager *managerCategory;
@@ -53,8 +55,6 @@
 @property (nonatomic, strong) IBOutlet UIImageView *imgFavoriteActive;
 
 //HOME
-@property (nonatomic, strong) IBOutlet UILabel *lbHome;
-@property (nonatomic, strong) IBOutlet UIImageView *imgHome;
 //TIMER
 @property (nonatomic, strong) IBOutlet UILabel *lbTimer;
 @property (nonatomic, strong) IBOutlet UIImageView *imgTimer;
@@ -66,6 +66,12 @@
 @property (nonatomic, strong) IBOutlet UIImageView *imgSetting;
 @property (nonatomic, strong) IBOutlet UIImageView *imgSettingActive;
 @property (nonatomic, retain) UIView *volumeView;
+
+//
+@property (nonatomic, strong) IBOutlet MDButtonIcon *btnPlus;
+@property (nonatomic, strong) IBOutlet MDButtonIcon *btnPlayer;
+@property (nonatomic, strong) IBOutlet ShortcutScreenVC *viewShortCutScreen;
+
 
 @property (weak, nonatomic) IBOutlet ASProgressPopUpView *progressView1;
 @property(nonatomic, weak) IBOutlet GADBannerView *bannerView;

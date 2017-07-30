@@ -1,0 +1,22 @@
+libskeleton is a library for reading and writing Ogg Skeleton data.
+
+Ogg Skeleton provides structuring information for multitrack Ogg files. 
+It is compatible with Ogg Theora and provides extra clues for 
+synchronization and content negotiation such as language selection. 
+
+The library it self - apart from the usual system libraries - only 
+depends on libogg, available in most free software distributions, 
+or in source form at: http://xiph.org/downloads 
+
+Build with:
+
+$ ./configure
+$ make
+# make install
+
+or:
+
+$ ./configure --prefix=$HOME
+$ make
+$ make install
+

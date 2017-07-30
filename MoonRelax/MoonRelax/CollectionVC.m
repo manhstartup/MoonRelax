@@ -425,6 +425,7 @@
     NSString *fullPath = [self getFullPathWithFileName:[NSString stringWithFormat:@"%@/img/%@",dicCategory[@"path"],dic[@"img"]]];
     cell.imgIcon.image = [[UIImage imageWithContentsOfFile:fullPath] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     cell.imgIcon.tintColor = [UIColor whiteColor];
+    cell.imgBackground.backgroundColor = [self colorWithString:dic[@"color"]];
     if ([dic[@"active"] boolValue]) {
         cell.imgCheck.hidden = NO;
     }
@@ -452,6 +453,21 @@
          }
      }];
     return cell;
+}
+-(UIColor*)colorWithString:(NSString*)strColor
+{
+    if (strColor.length > 0) {
+        unsigned result = 0;
+        NSScanner *scanner = [NSScanner scannerWithString:strColor];
+        [scanner setScanLocation:0]; // bypass '#' character
+        [scanner scanHexInt:&result];
+        return UIColorFromRGB(result);
+
+    }
+    else
+    {
+        return UIColorFromRGB(COLOR_SOUND_ITEM);
+    }
 }
 //MARK: - InAppPurchase
 
