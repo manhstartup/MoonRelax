@@ -269,18 +269,21 @@
                 strCover = dicCategory[@"cover"][1][strDevice];
             }
             if (areBuyCategory) {
-                [self.btnDownLoad setTitle:str(kUpdate) forState:UIControlStateNormal];
+                [self.btnDownLoad setTitle:@"" forState:UIControlStateNormal];
+                [self.btnDownLoad fnSetIcon:@"icon_download" withTintColor:[UIColor whiteColor]];
             }
             else
             {
 
                 if (price) {
-                    [self.btnDownLoad setTitle:[NSString stringWithFormat:@"Buy %@%@",@"$",dicCategory[@"price"][@"value"]] forState:UIControlStateNormal];
+                    [self.btnDownLoad fnSetIcon:@"" withTintColor:[UIColor whiteColor]];
+                    [self.btnDownLoad setTitle:[NSString stringWithFormat:@"%@%@",@"$",dicCategory[@"price"][@"value"]] forState:UIControlStateNormal];
 
                 }
                 else
                 {
-                    [self.btnDownLoad setTitle:str(kUpdate) forState:UIControlStateNormal];
+                    [self.btnDownLoad setTitle:@"" forState:UIControlStateNormal];
+                    [self.btnDownLoad fnSetIcon:@"icon_download" withTintColor:[UIColor whiteColor]];
                 }
             }
         }
@@ -288,7 +291,8 @@
         {
             
             if (areBuyCategory) {
-                [self.btnDownLoad setTitle:str(kUpdate) forState:UIControlStateNormal];
+                [self.btnDownLoad setTitle:@"" forState:UIControlStateNormal];
+                [self.btnDownLoad fnSetIcon:@"icon_download" withTintColor:[UIColor whiteColor]];
             }
             else
             {
@@ -299,13 +303,14 @@
                     }
                 }
                 if (price) {
-                    [self.btnDownLoad setTitle:str(kBuy) forState:UIControlStateNormal];
-                    [self.btnDownLoad setTitle:[NSString stringWithFormat:@"%@ %@%@",str(kBuy),@"$",dicCategory[@"price"][@"value"]] forState:UIControlStateNormal];
+                    [self.btnDownLoad fnSetIcon:@"" withTintColor:[UIColor whiteColor]];
+                    [self.btnDownLoad setTitle:[NSString stringWithFormat:@"%@%@",@"$",dicCategory[@"price"][@"value"]] forState:UIControlStateNormal];
                     
                 }
                 else
                 {
-                    [self.btnDownLoad setTitle:str(kUpdate) forState:UIControlStateNormal];
+                    [self.btnDownLoad setTitle:@"" forState:UIControlStateNormal];
+                    [self.btnDownLoad fnSetIcon:@"icon_download" withTintColor:[UIColor whiteColor]];
                 }
             }
             strCover = dicCategory[@"cover"];
@@ -526,7 +531,8 @@
             [[NSUserDefaults standardUserDefaults] setBool:YES forKey:proIdentifier];
             [[NSUserDefaults standardUserDefaults] synchronize];
             areBuyCategory = [[NSUserDefaults standardUserDefaults] boolForKey:proIdentifier];
-            [self.btnDownLoad setTitle:str(kUpdate) forState:UIControlStateNormal];
+            [self.btnDownLoad setTitle:@"" forState:UIControlStateNormal];
+            [self.btnDownLoad fnSetIcon:@"icon_download" withTintColor:[UIColor whiteColor]];
             [self downloadAction:nil];
         }
     }];

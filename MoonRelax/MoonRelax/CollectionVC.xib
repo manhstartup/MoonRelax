@@ -44,15 +44,15 @@
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8tu-j0-tMG">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         </imageView>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kda-Ch-rTb">
-                            <rect key="frame" x="111.5" y="572" width="152" height="45"/>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="kda-Ch-rTb" customClass="MDButtonIcon">
+                            <rect key="frame" x="157.5" y="557" width="60" height="60"/>
+                            <color key="backgroundColor" red="0.92549019610000005" green="0.0" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="45" id="D4h-Op-jv7"/>
-                                <constraint firstAttribute="width" constant="152" id="Kpy-dz-viF"/>
+                                <constraint firstAttribute="height" constant="60" id="D4h-Op-jv7"/>
+                                <constraint firstAttribute="width" constant="60" id="Kpy-dz-viF"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="17"/>
-                            <state key="normal" title="Update" backgroundImage="ic_btnUpdate"/>
+                            <state key="normal" title="Update"/>
                             <connections>
                                 <action selector="downloadAction:" destination="Uwh-Sk-xwS" eventType="touchUpInside" id="amH-Yv-J0D"/>
                             </connections>
@@ -111,7 +111,6 @@
         </view>
     </objects>
     <resources>
-        <image name="ic_btnUpdate" width="456" height="129"/>
         <image name="ic_close" width="108" height="108"/>
     </resources>
 </document>

@@ -35,6 +35,11 @@
 {
     imgIcon.image = [UIImage imageNamed:strNameIcon];
 }
+-(void)fnSetIcon:(NSString *)strNameIcon withTintColor:(UIColor*)color
+{
+    imgIcon.image = [[UIImage imageNamed:strNameIcon] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    imgIcon.tintColor = color;
+}
 -(void)addContraintSupview:(UIView*)view withSuperView:(UIView*)viewSuper
 {
     view.translatesAutoresizingMaskIntoConstraints = NO;

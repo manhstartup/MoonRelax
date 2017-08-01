@@ -14,4 +14,5 @@
 
 }
 -(void)fnSetIcon:(NSString*)strNameIcon;
+-(void)fnSetIcon:(NSString *)strNameIcon withTintColor:(UIColor*)color;
 @end

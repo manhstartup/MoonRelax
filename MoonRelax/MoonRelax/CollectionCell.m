@@ -19,6 +19,8 @@
     [self.imgAds.layer setMasksToBounds:YES];
     self.imgAds.layer.cornerRadius= 30;
     self.lbTitle.textColor = UIColorFromRGB(COLOR_TEXT_ITEM);
+    self.imgCheck.image = [[UIImage imageNamed:@"Oval_2"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    self.imgCheck.tintColor = UIColorFromRGB(COLOR_BACKGROUND_HOME_TOP);
     /**Adds a gesture recognizer for a long press.*/
     UILongPressGestureRecognizer * pressRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress:)];
     pressRecognizer.minimumPressDuration = 1.5;

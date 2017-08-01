@@ -44,8 +44,13 @@
                                 <outlet property="delegate" destination="-1" id="CK2-N2-xXm"/>
                             </connections>
                         </scrollView>
+                        <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JYE-VO-ftJ">
+                            <rect key="frame" x="133.5" y="578" width="108" height="20"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Explorer Cities" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NoL-nh-2Bx">
-                            <rect key="frame" x="0.0" y="578" width="375" height="20"/>
+                            <rect key="frame" x="133.5" y="578" width="108" height="20"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="20" id="X96-Pp-Nqo"/>
                             </constraints>
@@ -64,16 +69,19 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
+                        <constraint firstItem="JYE-VO-ftJ" firstAttribute="leading" secondItem="NoL-nh-2Bx" secondAttribute="leading" id="04R-gi-5cW"/>
                         <constraint firstAttribute="trailing" secondItem="szj-Ey-567" secondAttribute="trailing" id="0J6-oa-UdW"/>
+                        <constraint firstItem="JYE-VO-ftJ" firstAttribute="top" secondItem="NoL-nh-2Bx" secondAttribute="top" id="7gI-Lc-wQ0"/>
                         <constraint firstItem="hKX-rp-Ikx" firstAttribute="leading" secondItem="jmE-MP-vBO" secondAttribute="leading" id="8xh-b2-URZ"/>
+                        <constraint firstItem="NoL-nh-2Bx" firstAttribute="centerX" secondItem="szj-Ey-567" secondAttribute="centerX" id="G1v-2c-N8q"/>
                         <constraint firstItem="hKX-rp-Ikx" firstAttribute="top" secondItem="jmE-MP-vBO" secondAttribute="top" id="H1w-mu-1ah"/>
                         <constraint firstItem="szj-Ey-567" firstAttribute="leading" secondItem="jmE-MP-vBO" secondAttribute="leading" id="IGL-d3-vCZ"/>
-                        <constraint firstItem="NoL-nh-2Bx" firstAttribute="leading" secondItem="jmE-MP-vBO" secondAttribute="leading" id="OyW-uK-3dL"/>
                         <constraint firstAttribute="bottom" secondItem="szj-Ey-567" secondAttribute="bottom" constant="7" id="Rgl-T1-TMe"/>
                         <constraint firstItem="szj-Ey-567" firstAttribute="top" secondItem="NoL-nh-2Bx" secondAttribute="bottom" constant="2" id="bWo-mW-8Rt"/>
+                        <constraint firstItem="JYE-VO-ftJ" firstAttribute="bottom" secondItem="NoL-nh-2Bx" secondAttribute="bottom" id="eha-sz-aJu"/>
                         <constraint firstAttribute="bottom" secondItem="hKX-rp-Ikx" secondAttribute="bottom" id="jNr-Hh-8nN"/>
-                        <constraint firstAttribute="trailing" secondItem="NoL-nh-2Bx" secondAttribute="trailing" id="rk6-IU-SKP"/>
                         <constraint firstAttribute="trailing" secondItem="hKX-rp-Ikx" secondAttribute="trailing" id="s64-Om-TiI"/>
+                        <constraint firstItem="JYE-VO-ftJ" firstAttribute="trailing" secondItem="NoL-nh-2Bx" secondAttribute="trailing" id="x3B-XQ-LjJ"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4QC-v9-cCj" customClass="GADBannerView">
